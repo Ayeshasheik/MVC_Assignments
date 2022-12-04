@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MVC-HOL-2.props" />
+</Project>

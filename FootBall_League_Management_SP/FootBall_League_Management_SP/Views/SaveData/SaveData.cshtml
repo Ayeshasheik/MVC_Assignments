@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SaveData</title>
+</head>
+<body style=" text-align: center">
+    <h1>Foot Ball League Management</h1>
+    <h3><font color="RED">Foot Ball  League Data </font></h3>
+    <div style="display: flex;justify-content: center;">
+        <form action="/SaveData/SaveData" method="post">
+            <table border="1" bgcolor="white" height="300" width="300">
+                <tr>
+                    <td>Match ID *</td>
+                    <td><input type="text" name="matchid" /></td>
+                    @ViewBag.matchid_notnull
+                    <br />
+                </tr>
+                <tr>
+                    <td>TeamName 1 *</td>
+                    <td><input type="text" name="TeamName1" /></td>
+                    @ViewBag.TeamName1_notnull
+                    <br />
+                </tr>
+                <tr>
+                    <td>TeamName 2 *</td>
+                    <td><input type="text" name="TeamName2" /></td>
+                    @ViewBag.TeamName2_notnull
+                    <br />
+                </tr>
+                <tr>
+                    <td>Status *</td>
+
+                    <td>
+                        <select name="status" id="status">
+                            <option value="win">win</option>
+                            <option value="draw">draw</option>
+                        </select>
+                    </td>
+                    @ViewBag.Status_notnull
+                    <br />
+                </tr>
+                <tr>
+                    <td>winning team </td>
+                    <td><input type="text" id="winningteam" name="winningteam" /></td>
+                </tr>
+                <tr>
+                    <td>points *</td>
+                    <td><input type="text" name="points" /></td>
+                    @ViewBag.Points_notnull
+                    <br />
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Save Data" /></td>
+                </tr>
+            </table>
+            @ViewBag.result
+        </form>
+    </div>
+</body>
+</html>
